@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>monoloc0</title>
+    <link>https://monoloc0.github.io/</link>
+    <description>Recent content on monoloc0</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>monoloc0 2021</copyright>
+    <lastBuildDate>Tue, 04 May 2021 22:06:02 +0200</lastBuildDate>
+    
+	<atom:link href="https://monoloc0.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Resources</title>
+      <link>https://monoloc0.github.io/resources/</link>
+      <pubDate>Tue, 04 May 2021 22:06:02 +0200</pubDate>
+      
+      <guid>https://monoloc0.github.io/resources/</guid>
+      <description>Site under construction </description>
+    </item>
+    
+    <item>
+      <title>Whoami</title>
+      <link>https://monoloc0.github.io/whoami/</link>
+      <pubDate>Tue, 04 May 2021 22:05:05 +0200</pubDate>
+      
+      <guid>https://monoloc0.github.io/whoami/</guid>
+      <description>Site under construction </description>
+    </item>
+    
+  </channel>
+</rss>
