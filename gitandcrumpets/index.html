@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="color-scheme" content="light dark">
+
+    
+
+    <meta name="author" content="monoloc0">
+    <meta name="description" content="https://tryhackme.com/room/gitandcrumpets
+Enumeration    Port Scan     pre code { background-color: #eee; }  monoloco@kali:~$ rustscan -a 10.10.202.72 --ulimit 5000 The Modern Day Port Scanner. ________________________________________ : https://discord.gg/GFrQsGy : : https://github.com/RustScan/RustScan : -------------------------------------- Real hackers hack time ⌛ [~] The config file is expected to be at &quot;/home/monoloco/.rustscan.toml&quot; [~] Automatically increasing ulimit value to 5000. Open 10.10.202.72:22 Open 10.10.202.72:80 [~] Starting Script(s) [&gt;] Script to be run Some(&quot;nmap -vvv -p {{port}} {{ip}}&quot;) [~] Starting Nmap 7.">
+    <meta name="keywords" content="infosec,bugbounty,personal">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Git and Crumpets"/>
+<meta name="twitter:description" content="https://tryhackme.com/room/gitandcrumpets
+Enumeration    Port Scan     pre code { background-color: #eee; }  monoloco@kali:~$ rustscan -a 10.10.202.72 --ulimit 5000 The Modern Day Port Scanner. ________________________________________ : https://discord.gg/GFrQsGy : : https://github.com/RustScan/RustScan : -------------------------------------- Real hackers hack time ⌛ [~] The config file is expected to be at &quot;/home/monoloco/.rustscan.toml&quot; [~] Automatically increasing ulimit value to 5000. Open 10.10.202.72:22 Open 10.10.202.72:80 [~] Starting Script(s) [&gt;] Script to be run Some(&quot;nmap -vvv -p {{port}} {{ip}}&quot;) [~] Starting Nmap 7."/>
+
+    <meta property="og:title" content="Git and Crumpets" />
+<meta property="og:description" content="https://tryhackme.com/room/gitandcrumpets
+Enumeration    Port Scan     pre code { background-color: #eee; }  monoloco@kali:~$ rustscan -a 10.10.202.72 --ulimit 5000 The Modern Day Port Scanner. ________________________________________ : https://discord.gg/GFrQsGy : : https://github.com/RustScan/RustScan : -------------------------------------- Real hackers hack time ⌛ [~] The config file is expected to be at &quot;/home/monoloco/.rustscan.toml&quot; [~] Automatically increasing ulimit value to 5000. Open 10.10.202.72:22 Open 10.10.202.72:80 [~] Starting Script(s) [&gt;] Script to be run Some(&quot;nmap -vvv -p {{port}} {{ip}}&quot;) [~] Starting Nmap 7." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://monoloc0.github.io/gitandcrumpets/" /><meta property="article:section" content="" />
+
+
+
+
+
+    <title>
+  Git and Crumpets · monoloc0
+</title>
+
+    
+      <link rel="canonical" href="https://monoloc0.github.io/gitandcrumpets/">
+    
+
+    <link rel="preload" href="https://monoloc0.github.io/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+    
+      
+      
+      <link rel="stylesheet" href="https://monoloc0.github.io/css/coder.min.843ee18d510f7cb1bb49110db117b99ea65489c095d620a5d79ea71693478e77.css" integrity="sha256-hD7hjVEPfLG7SRENsRe5nqZUicCV1iCl156nFpNHjnc=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="https://monoloc0.github.io/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://monoloc0.github.io/images/favicon-16x16.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="https://monoloc0.github.io/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://monoloc0.github.io/images/apple-touch-icon.png">
+
+    <meta name="generator" content="Hugo 0.89.4" />
+  </head>
+
+  
+  
+  <body class="preload-transitions colorscheme-light">
+    
+
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://monoloc0.github.io/">
+      monoloc0
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://monoloc0.github.io/whoami/">whoami</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://monoloc0.github.io/writeups/">writeups</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://monoloc0.github.io/resources/">resources</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container page">
+  <article>
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="https://monoloc0.github.io/gitandcrumpets/">
+          Git and Crumpets
+        </a>
+      </h1>
+    </header>
+
+    <p><em><a href="https://tryhackme.com/room/gitandcrumpets">https://tryhackme.com/room/gitandcrumpets</a></em></p>
+<h1 id="enumeration">
+  Enumeration
+  <a class="heading-link" href="#enumeration">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h1>
+<h2 id="port-scan">
+  Port Scan
+  <a class="heading-link" href="#port-scan">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<style>
+
+
+pre code {
+  background-color: #eee;
+
+}
+
+
+</style>
+
+<pre tabindex="0"><code>monoloco@kali:~$ rustscan -a 10.10.202.72 --ulimit 5000
+
+The Modern Day Port Scanner.
+________________________________________
+: https://discord.gg/GFrQsGy           :
+: https://github.com/RustScan/RustScan :
+ --------------------------------------
+Real hackers hack time ⌛
+
+[~] The config file is expected to be at &quot;/home/monoloco/.rustscan.toml&quot;
+[~] Automatically increasing ulimit value to 5000.
+Open 10.10.202.72:22
+Open 10.10.202.72:80
+[~] Starting Script(s)
+[&gt;] Script to be run Some(&quot;nmap -vvv -p {{port}} {{ip}}&quot;)
+
+[~] Starting Nmap 7.80 ( https://nmap.org ) at 2021-07-02 22:53 GMT
+Initiating Ping Scan at 22:53
+Scanning 10.10.202.72 [2 ports]
+Completed Ping Scan at 22:53, 0.10s elapsed (1 total hosts)
+Initiating Connect Scan at 22:53
+Scanning crumpets.thm (10.10.202.72) [2 ports]
+Discovered open port 80/tcp on 10.10.202.72
+Discovered open port 22/tcp on 10.10.202.72
+Completed Connect Scan at 22:53, 0.08s elapsed (2 total ports)
+Nmap scan report for crumpets.thm (10.10.202.72)
+Host is up, received syn-ack (0.092s latency).
+Scanned at 2021-07-02 22:53:55 GMT for 0s
+
+PORT   STATE SERVICE REASON
+22/tcp open  ssh     syn-ack
+80/tcp open  http    syn-ack
+
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 0.33 seconds
+</code></pre><p>When accessing <code>crumpets.thm</code> I get redirected to <code>https://www.youtube.com/watch?v=dQw4w9WgXcQ&amp;feature=youtu.be</code></p>
+<h2 id="nikto-scan">
+  Nikto Scan
+  <a class="heading-link" href="#nikto-scan">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p><code>nikto -host http://crumpets.thm</code></p>
+<p><img src="../../_resources/20210703010248.png" alt="20210703010248.png"></p>
+<p>I added <strong>git.git-and-crumpets.thm</strong> to the <em>/etc/hosts</em> file</p>
+<h2 id="port-80-gitgit-and-crumpetsthm">
+  Port 80 (git.git-and-crumpets.thm)
+  <a class="heading-link" href="#port-80-gitgit-and-crumpetsthm">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p><img src="../../_resources/20210703010517.png" alt="20210703010517.png"></p>
+<p><img src="../../_resources/20210703010902.png" alt="20210703010902.png"></p>
+<p>I then had a quick look around</p>
+<p><img src="../../_resources/20210705194541.png" alt="20210705194541.png"></p>
+<p><img src="../../_resources/20210705194729.png" alt="20210705194729.png"></p>
+<p>Let&rsquo;s check out the commit history:</p>
+<p><img src="../../_resources/20210705194755.png" alt="20210705194755.png"></p>
+<p>Those commit messages look interesting.</p>
+<p><img src="../../_resources/20210705194835.png" alt="20210705194835.png"></p>
+<p>Seems like some stenography magic is going on here :)</p>
+<p>Let&rsquo;s download the avatar picture and run stegseek</p>
+<pre tabindex="0"><code>stegseek avatar.png
+</code></pre><p><img src="../../_resources/20210705195832.png" alt="20210705195832.png"></p>
+<p>Stegseek does not support .png files</p>
+<p>Can it be, that it is actually easier than I though&hellip;.?</p>
+<p>Let&rsquo;s try out the string command</p>
+<pre tabindex="0"><code>strings avatar.png
+</code></pre><p>Voila, seems like we found a password.</p>
+<p><img src="../../_resources/20210705200852.png" alt="20210705200852.png"></p>
+<p>Login using the following credentials</p>
+<ul>
+<li>user: <a href="mailto:withcream@example.com">withcream@example.com</a></li>
+<li>password: &lt;THE_FOUND_PASSWORD_FROM_ABOVE&gt;</li>
+</ul>
+<p><img src="../../_resources/20210705200150.png" alt="20210705200150.png"></p>
+<p>Next, create a git hook that looks as follows:</p>
+<p><img src="../../_resources/20210705203423.png" alt="20210705203423.png"></p>
+<p><img src="../../_resources/20210705202728.png" alt="20210705202728.png"></p>
+<p><img src="../../_resources/20210705203544.png" alt="20210705203544.png"></p>
+<p><strong>User.txt</strong></p>
+<p><img src="../../_resources/20210705203853.png" alt="20210705203853.png"></p>
+<p>Great, we found the user flag.</p>
+<h2 id="roottxt">
+  root.txt
+  <a class="heading-link" href="#roottxt">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>Next, I looked for the gitea database.</p>
+<pre tabindex="0"><code>find / -name *gitea* -type f 2&gt;/dev/null
+</code></pre><p><img src="../../_resources/20210705210047.png" alt="20210705210047.png"></p>
+<p>Next, we open the database and check out the tables:</p>
+<p><img src="../../_resources/20210705210728.png" alt="20210705210728.png"></p>
+<p>The <em>user</em> table is the one that is of interest to us.</p>
+<p>In order to figure out what information is stored in the table, we use the following command</p>
+<pre tabindex="0"><code>PRAGMA table_info(usre);
+</code></pre><p><img src="../../_resources/20210705211015.png" alt="20210705211015.png"></p>
+<p>The <em>is_admin</em> column looks interesting.</p>
+<p>Let&rsquo;s change the value to <strong>1</strong> and see what happens&hellip;</p>
+<p><img src="../../_resources/20210705211249.png" alt="20210705211249.png"></p>
+<p>Now, we will have another look at the web UI.</p>
+<p><img src="../../_resources/20210705211607.png" alt="20210705211607.png"></p>
+<p>Now that we have <strong>admin privileges</strong> we can see another repository.</p>
+<p>Next up, we check the branches:</p>
+<p><img src="../../_resources/20210705211713.png" alt="20210705211713.png"></p>
+<p>It seems like we just found a ssh key in the <strong>dotfiles</strong> branch</p>
+<p><img src="../../_resources/20210705211825.png" alt="20210705211825.png"></p>
+<p><img src="../../_resources/20210705211901.png" alt="20210705211901.png"></p>
+<p>Now,</p>
+<ul>
+<li>download the key</li>
+<li>save it to a file</li>
+<li>set the required permissions (0400)</li>
+<li>use it to access the box</li>
+</ul>
+<pre tabindex="0"><code>ssh root@git.git-and-crumpets.thm -i private.key 
+</code></pre><p>A passphrase is required: <strong>Su</strong>****<strong>3</strong> (as hinted in the backup repo)</p>
+<p><img src="../../_resources/20210705212220.png" alt="20210705212220.png"></p>
+<p><img src="../../_resources/20210705212410.png" alt="20210705212410.png"></p>
+
+  </article>
+</section>
+
+  
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+    ©
+    
+    2021
+     monoloc0 
+    ·
+    Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+    
+  </section>
+</footer>
+
+    </main>
+
+    
+      
+      <script src="https://monoloc0.github.io/js/coder.min.03b17769f4f91ae35667e1f2a1ca8c16f50562576cf90ff32b3179926914daa5.js" integrity="sha256-A7F3afT5GuNWZ&#43;HyocqMFvUFYlds&#43;Q/zKzF5kmkU2qU="></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+  </body>
+
+</html>

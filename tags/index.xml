@@ -6,10 +6,6 @@
     <description>Recent content in Tags on monoloc0</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>monoloc0 2021</copyright>
-    
-	<atom:link href="https://monoloc0.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <copyright>monoloco 2021</copyright><atom:link href="https://monoloc0.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

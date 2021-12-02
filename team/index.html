@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="color-scheme" content="light dark">
+
+    
+
+    <meta name="author" content="monoloc0">
+    <meta name="description" content="https://tryhackme.com/room/teamcw
+Enumeration    Port Scan      Run a Port Scan using NMAP nmap -sV -sC -oA nmap/output &lt;IP_ADDRESS_OF_MASCHINE&gt;
+  We can see that Ports 21, 22 and 80 are open  pre code { background-color: #eee; }    Nmap 7.80 scan initiated Fri Mar 5 21:49:20 2021 as: nmap -sV -sC -oA nmap/output teamcw Nmap scan report for teamcw (10.10.87.236) Host is up (0.">
+    <meta name="keywords" content="infosec,bugbounty,personal">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Team"/>
+<meta name="twitter:description" content="https://tryhackme.com/room/teamcw
+Enumeration    Port Scan      Run a Port Scan using NMAP nmap -sV -sC -oA nmap/output &lt;IP_ADDRESS_OF_MASCHINE&gt;
+  We can see that Ports 21, 22 and 80 are open  pre code { background-color: #eee; }    Nmap 7.80 scan initiated Fri Mar 5 21:49:20 2021 as: nmap -sV -sC -oA nmap/output teamcw Nmap scan report for teamcw (10.10.87.236) Host is up (0."/>
+
+    <meta property="og:title" content="Team" />
+<meta property="og:description" content="https://tryhackme.com/room/teamcw
+Enumeration    Port Scan      Run a Port Scan using NMAP nmap -sV -sC -oA nmap/output &lt;IP_ADDRESS_OF_MASCHINE&gt;
+  We can see that Ports 21, 22 and 80 are open  pre code { background-color: #eee; }    Nmap 7.80 scan initiated Fri Mar 5 21:49:20 2021 as: nmap -sV -sC -oA nmap/output teamcw Nmap scan report for teamcw (10.10.87.236) Host is up (0." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://monoloc0.github.io/team/" /><meta property="article:section" content="" />
+
+
+
+
+
+    <title>
+  Team · monoloc0
+</title>
+
+    
+      <link rel="canonical" href="https://monoloc0.github.io/team/">
+    
+
+    <link rel="preload" href="https://monoloc0.github.io/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+    
+      
+      
+      <link rel="stylesheet" href="https://monoloc0.github.io/css/coder.min.843ee18d510f7cb1bb49110db117b99ea65489c095d620a5d79ea71693478e77.css" integrity="sha256-hD7hjVEPfLG7SRENsRe5nqZUicCV1iCl156nFpNHjnc=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="https://monoloc0.github.io/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://monoloc0.github.io/images/favicon-16x16.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="https://monoloc0.github.io/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://monoloc0.github.io/images/apple-touch-icon.png">
+
+    <meta name="generator" content="Hugo 0.89.4" />
+  </head>
+
+  
+  
+  <body class="preload-transitions colorscheme-light">
+    
+
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://monoloc0.github.io/">
+      monoloc0
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://monoloc0.github.io/whoami/">whoami</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://monoloc0.github.io/writeups/">writeups</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://monoloc0.github.io/resources/">resources</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container page">
+  <article>
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="https://monoloc0.github.io/team/">
+          Team
+        </a>
+      </h1>
+    </header>
+
+    <p><em><a href="https://tryhackme.com/room/teamcw">https://tryhackme.com/room/teamcw</a></em></p>
+<h1 id="enumeration">
+  Enumeration
+  <a class="heading-link" href="#enumeration">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h1>
+<h2 id="port-scan">
+  Port Scan
+  <a class="heading-link" href="#port-scan">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<ul>
+<li>
+<p>Run a Port Scan using NMAP
+<code>nmap -sV -sC -oA nmap/output &lt;IP_ADDRESS_OF_MASCHINE&gt;</code></p>
+</li>
+<li>
+<p>We can see that Ports <strong>21, 22</strong> and <strong>80</strong> are open
+<style>
+
+
+pre code {
+  background-color: #eee;
+
+}
+
+
+</style>
+</p>
+</li>
+</ul>
+<pre tabindex="0"><code>Nmap 7.80 scan initiated Fri Mar  5 21:49:20 2021 as: nmap -sV -sC -oA nmap/output teamcw
+Nmap scan report for teamcw (10.10.87.236)
+Host is up (0.055s latency).
+Not shown: 997 filtered ports
+PORT   STATE SERVICE VERSION
+21/tcp open  ftp     vsftpd 3.0.3
+22/tcp open  ssh     OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 79:5f:11:6a:85:c2:08:24:30:6c:d4:88:74:1b:79:4d (RSA)
+|   256 af:7e:3f:7e:b4:86:58:83:f1:f6:a2:54:a6:9b:ba:ad (ECDSA)
+|_  256 26:25:b0:7b:dc:3f:b2:94:37:12:5d:cd:06:98:c7:9f (ED25519)
+80/tcp open  http    Apache httpd 2.4.29 ((Ubuntu))
+|_http-server-header: Apache/2.4.29 (Ubuntu)
+|_http-title: Apache2 Ubuntu Default Page: It works! If you see this add 'te...
+Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done at Fri Mar  5 21:49:38 2021 -- 1 IP address (1 host up) scanned in 17.39 seconds
+</code></pre><ul>
+<li>Next I had a quick look at the web page</li>
+<li>Only the <em>Apache2 Ubuntu Default Page</em> was shown</li>
+<li>Having a look at the Source showed that I have to add &lsquo;team.thm&rsquo; to my hosts file</li>
+</ul>
+<p><img src="https://user-images.githubusercontent.com/78683952/110202466-24dc1100-7e69-11eb-8fb3-ff424a266bd9.png" alt="image"></p>
+<ul>
+<li>After putting <em>team.thm</em> into my hosts file the following page appeared</li>
+</ul>
+<p><img src="https://user-images.githubusercontent.com/78683952/110202498-59e86380-7e69-11eb-9058-0cab1a29e2eb.png" alt="image"></p>
+<ul>
+<li>Next I ran <strong>gobuster</strong> and found the hidden directory <em>scripts</em>
+<code>gobuster dir -w /usr/share/wordlists/dirb/common.txt -u http://team.thm</code></li>
+</ul>
+<p><img src="https://user-images.githubusercontent.com/78683952/110202590-04f91d00-7e6a-11eb-8267-ee5f922b27c5.png" alt="image"></p>
+<ul>
+<li>Wthin this directory there is a file called <em>script.txt</em>
+<code>gobuster dir -w /usr/share/wordlists/dirb/common.txt -u http://team.thm/scripts/ -x .txt</code></li>
+</ul>
+<p><img src="https://user-images.githubusercontent.com/78683952/110202593-104c4880-7e6a-11eb-9aa7-bc1f84518ea0.png" alt="image"></p>
+<ul>
+<li>Browsing to <a href="http://team.thm/scripts/script.txt">http://team.thm/scripts/script.txt</a> displays the following:</li>
+</ul>
+<p><img src="https://user-images.githubusercontent.com/78683952/110202629-52758a00-7e6a-11eb-81f0-f54c1c889b14.png" alt="image"></p>
+<ul>
+<li>the hint on the very bottom made me try to access: <em><a href="http://team.thm/scripts/script.old">http://team.thm/scripts/script.old</a></em></li>
+</ul>
+<p>Voilà :)</p>
+<p><img src="https://user-images.githubusercontent.com/78683952/110240335-b7ed7780-7f4b-11eb-8621-673f0419cc35.png" alt="image"></p>
+<p>We now have FTP Credentials and can use them to login to the FTP service</p>
+<p><img src="https://user-images.githubusercontent.com/78683952/110202739-fa8b5300-7e6a-11eb-9ab1-b9aef3554d17.png" alt="image"></p>
+<ul>
+<li>Next I checked out the New_site.txt:</li>
+</ul>
+<p><img src="https://user-images.githubusercontent.com/78683952/110239455-38f64000-7f47-11eb-828b-bf4357747af5.png" alt="image"></p>
+<p>It seems like we have to adjust the entry in our hosts file from <strong>team.thm</strong> to <strong>dev.team.thm</strong>
+Furthermore, the two names within the .txt file look like usernames. Let&rsquo;s take a note of that.</p>
+<ul>
+<li>Browsing to <strong>dev.team.thm</strong> shows us the following</li>
+</ul>
+<p><img src="https://user-images.githubusercontent.com/78683952/110202886-a3d24900-7e6b-11eb-8d29-7f1f9eb68215.png" alt="image"></p>
+<p><img src="https://user-images.githubusercontent.com/78683952/110202911-b8164600-7e6b-11eb-8236-3e5e6ca11af1.png" alt="image"></p>
+<p>The <code>page=teamshare.php</code> looks very suspicious.</p>
+<p>Lets try: <code>page=../../../../etc/passwd </code></p>
+<p>Nice :)</p>
+<p><img src="https://user-images.githubusercontent.com/78683952/110203009-14796580-7e6c-11eb-9871-203f47cfba80.png" alt="image"></p>
+<ul>
+<li>Being able to exploit this <strong>Directory Traversal</strong> / <strong>LFI Vulnerabilty</strong> we can now try to find the <strong>id_rsa</strong> that was mentioned in the <strong>New_site.txt</strong>
+<ul>
+<li>view-source:http://dev.team.thm/script.php?page=php://filter/resource=../../../../etc/ssh/sshd_config</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://user-images.githubusercontent.com/78683952/110203090-6d48fe00-7e6c-11eb-9ca7-81992d6ec662.png" alt="image"></p>
+<ul>
+<li>We can now connect to the machine with the following command: <code>ssh -i id_rsa dale@dev.team.thm</code> and get the <strong>user.txt</strong></li>
+</ul>
+<p><img src="https://user-images.githubusercontent.com/78683952/110239403-f46aa480-7f46-11eb-8383-2015871a8ffb.png" alt="image"></p>
+<h1 id="steps-to-roottxt">
+  Steps to root.txt
+  <a class="heading-link" href="#steps-to-roottxt">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h1>
+<h2 id="enumeration-1">
+  Enumeration
+  <a class="heading-link" href="#enumeration-1">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>What I almost always do first is <code>sudo -l</code></p>
+<p><img src="https://user-images.githubusercontent.com/78683952/110238487-3a713980-7f42-11eb-8caf-478c68087569.png" alt="image"></p>
+<p>That looks interesting. Let&rsquo;s have a closer look at <strong>/home/gyles/admin_checks</strong></p>
+<p><img src="https://user-images.githubusercontent.com/78683952/110238529-6c829b80-7f42-11eb-8113-feb52c8605ab.png" alt="image"></p>
+<p>The lines outlined in red look interesting. It seems as if the provided user input will be executed without any further sanitization.</p>
+<p>So, I started the script with the following line:
+<code>sudo -u gyles /home/gyles/admin_checks</code></p>
+<p>and then provided <code>/bin/bash</code> as the <em>date argument</em></p>
+<p><img src="https://user-images.githubusercontent.com/78683952/110238654-3265c980-7f43-11eb-9d0e-b42a210da0a1.png" alt="image"></p>
+<p>We are now in the context of gyles.</p>
+<p><img src="https://user-images.githubusercontent.com/78683952/110238742-883a7180-7f43-11eb-9e87-d9c335c01a69.png" alt="image"></p>
+<p>Gyles is a member of the admin group. Let&rsquo;s take a note of that.</p>
+<p>I continued my search for possible privilege escalation vectors using <strong>linpeas.sh</strong> (<a href="https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS)">https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS)</a>.</p>
+<p>The screenshot below shows something interesting:</p>
+<p><img src="https://user-images.githubusercontent.com/78683952/110238966-bec4bc00-7f44-11eb-98e4-e6a268b55895.png" alt="image"></p>
+<p>Inside the <strong>/opt/admin_stuff/</strong> directory I found <strong>script.sh</strong></p>
+<p><img src="https://user-images.githubusercontent.com/78683952/110239001-f2074b00-7f44-11eb-954e-ae5f836ed34a.png" alt="image"></p>
+<p>Interesting. So <strong>/usr/local/bin/main_backup.sh</strong> is executed every minute.</p>
+<p>Let&rsquo;s find out what it does:</p>
+<p><img src="https://user-images.githubusercontent.com/78683952/110239046-372b7d00-7f45-11eb-846c-1880ebeb2722.png" alt="image"></p>
+<p>It basically just copies the content of one directory into another.</p>
+<p>Checking out the destination directory showed me that the task is being performed as <strong>root</strong>.</p>
+<p><img src="https://user-images.githubusercontent.com/78683952/110239526-a4401200-7f47-11eb-87f2-2c0de2fed090.png" alt="image"></p>
+<p>And the good thing about it is, being a member of the admin group gives us write access to <strong>/usr/local/bin/main_backup.sh</strong></p>
+<p><img src="https://user-images.githubusercontent.com/78683952/110239698-8f17b300-7f48-11eb-8209-17530a0bf160.png" alt="image"></p>
+<p>So all that&rsquo;s left to do is</p>
+<ul>
+<li>starting a netcat listener</li>
+<li>putting a reverse shell into <strong>main_backup.sh</strong></li>
+<li>wait maximum 1 minute</li>
+</ul>
+<p><img src="https://user-images.githubusercontent.com/78683952/110239760-e9187880-7f48-11eb-94a6-bcc272dc680e.png" alt="image"></p>
+<ul>
+<li>and of course get root.txt :)</li>
+</ul>
+<p><img src="https://user-images.githubusercontent.com/78683952/110239296-773f2f80-7f46-11eb-875b-4697e646581d.png" alt="image"></p>
+
+  </article>
+</section>
+
+  
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+    ©
+    
+    2021
+     monoloc0 
+    ·
+    Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+    
+  </section>
+</footer>
+
+    </main>
+
+    
+      
+      <script src="https://monoloc0.github.io/js/coder.min.03b17769f4f91ae35667e1f2a1ca8c16f50562576cf90ff32b3179926914daa5.js" integrity="sha256-A7F3afT5GuNWZ&#43;HyocqMFvUFYlds&#43;Q/zKzF5kmkU2qU="></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+  </body>
+
+</html>

