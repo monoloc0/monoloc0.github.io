@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>monoloc0</title>
+    <link>https://www.monoloco.org/</link>
+    <description>Recent content on monoloc0</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>monoloco 2021</copyright><atom:link href="https://www.monoloco.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://www.monoloco.org/bash/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.monoloco.org/bash/</guid>
+      <description>Bash    The following gives an overview of all the bash commands I keep forgetting :D
+ pre code { background-color: #eee; }  Creating an array from a text file    mapfile -t myArray &amp;lt; file.txt For loop syntax    # Iterate over an array of elements for zone in &amp;quot;${myArray[@]}&amp;quot; do echo $zone done # for loop that runs 5 times for i in {1.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.monoloco.org/docker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.monoloco.org/docker/</guid>
+      <description>Useful docker commands     pre code { background-color: #eee; }  # List containers docker ps # List images docker images # Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE # e.g. To tag a local image with ID “0e5574283393” into the “fedora” repository with “version1.0”: docker tag 0e5574283393 fedora/httpd:version1.0 # Build an image from a Dockerfile docker build . # Launch a Bash terminal within a container docker exec -it &amp;lt;container&amp;gt; /bin/bash </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.monoloco.org/frankandherby/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.monoloco.org/frankandherby/</guid>
+      <description>Enumeration    Port Scan    nmap -sC -sV -oA nmap/output frankandherby.thm  pre code { background-color: #eee; }  # Nmap 7.91 scan initiated Sat Nov 20 09:12:00 2021 as: nmap -sC -sV -oA nmap/output 10.10.227.238 Nmap scan report for 10.10.227.238 Host is up (0.049s latency). Not shown: 997 closed ports PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 8.2p1 Ubuntu 4ubuntu0.2 (Ubuntu Linux; protocol 2.0) | ssh-hostkey: | 3072 64:79:10:0d:72:67:23:80:4a:1a:35:8e:0b:ec:a1:89 (RSA) | 256 3b:0e:e7:e9:a5:1a:e4:c5:c7:88:0d:fe:ee:ac:95:65 (ECDSA) |_ 256 d8:a7:16:75:a7:1b:26:5c:a9:2e:3f:ac:c0:ed:da:5c (ED25519) 3000/tcp open ppp?</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.monoloco.org/kubectl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.monoloco.org/kubectl/</guid>
+      <description>kubectl commands    This page gives an overview of the kubectl commands I mostly use
+Listing Resources     pre code { background-color: #eee; }  # Show all namespaces kubectl get namespaces # Show all pods kuebctl get pods # Show a list of all pods, containing information such as node name: kubectl get pods -o wide Creating a Resource    # Create a new namespace kubectl create namespace [namespace-name] Applying and Updating a Resource    # Create a new service with the definition contained in a [service-name].</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.monoloco.org/resources/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.monoloco.org/resources/</guid>
+      <description>Personal cheatsheets    Docker
+Kubectl
+Bash
+Useful links    Bugbounty - Tools
+PayloadsAllTheThings
+Reverse Shell Generator
+GTFOBins
+MongoDB Operator Reference</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.monoloco.org/thatstheticket/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.monoloco.org/thatstheticket/</guid>
+      <description>Enumeration    Open Ports     pre code { background-color: #eee; }  monoloco@kali:~/Dokumente/THM/ticket$ nmap -sC -sV -oA nmap/output ticket.thm Starting Nmap 7.80 ( https://nmap.org ) at 2021-06-08 19:18 GMT Nmap scan report for ticket.thm (10.10.133.188) Host is up (0.056s latency). Not shown: 998 closed ports PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0) | ssh-hostkey: | 2048 bf:c3:9c:99:2c:c4:e2:d9:20:33:d1:3c:dc:01:48:d2 (RSA) | 256 08:20:c2:73:c7:c5:d7:a7:ef:02:09:11:fc:85:a8:e2 (ECDSA) |_ 256 1f:51:68:2b:5e:99:57:4c:b7:40:15:05:74:d0:0d:9b (ED25519) 80/tcp open http nginx 1.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.monoloco.org/tokyoghoul/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.monoloco.org/tokyoghoul/</guid>
+      <description>Enumeration    Port Scan    Use nmap to scan all ports
+ pre code { background-color: #eee; }  # Nmap 7.80 scan initiated Tue Mar 16 17:48:05 2021 as: nmap -sV -sC -oA nmap/output tokyo.thm Nmap scan report for tokyo.thm (10.10.102.146) Host is up (0.045s latency). Not shown: 997 closed ports PORT STATE SERVICE VERSION 21/tcp open ftp vsftpd 3.0.3 | ftp-anon: Anonymous FTP login allowed (FTP code 230) |_drwxr-xr-x 3 ftp ftp 4096 Jan 23 22:26 need_Help?</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.monoloco.org/unstabletwin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.monoloco.org/unstabletwin/</guid>
+      <description>Enumeration    Port Scan     pre code { background-color: #eee; }  # Nmap 7.80 scan initiated Fri Apr 30 20:47:09 2021 as: nmap -sC -sV -oA nmap/output unstabletwin.thm Nmap scan report for unstabletwin.thm (10.10.59.62) Host is up (0.56s latency). Not shown: 998 filtered ports PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 8.0 (protocol 2.0) | ssh-hostkey: | 3072 ba:a2:40:8e:de:c3:7b:c7:f7:b3:7e:0c:1e:ec:9f:b8 (RSA) | 256 38:28:4c:e1:4a:75:3d:0d:e7:e4:85:64:38:2a:8e:c7 (ECDSA) |_ 256 1a:33:a0:ed:83:ba:09:a5:62:a7:df:ab:2f:ee:d0:99 (ED25519) 80/tcp open http nginx 1.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.monoloco.org/vulnnet-internal/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.monoloco.org/vulnnet-internal/</guid>
+      <description>Enumeration    Port Scan     pre code { background-color: #eee; }  Nmap scan report for vulnnet.thm (10.10.57.28) Host is up (0.059s latency). Not shown: 993 closed ports PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0) | ssh-hostkey: | 2048 5e:27:8f:48:ae:2f:f8:89:bb:89:13:e3:9a:fd:63:40 (RSA) | 256 f4:fe:0b:e2:5c:88:b5:63:13:85:50:dd:d5:86:ab:bd (ECDSA) |_ 256 82:ea:48:85:f0:2a:23:7e:0e:a9:d9:14:0a:60:2f:ad (ED25519) 111/tcp open rpcbind 2-4 (RPC #100000) | rpcinfo: | program version port/proto service | 100000 2,3,4 111/tcp rpcbind | 100000 2,3,4 111/udp rpcbind | 100000 3,4 111/tcp6 rpcbind | 100000 3,4 111/udp6 rpcbind | 100003 3 2049/udp nfs | 100003 3 2049/udp6 nfs | 100003 3,4 2049/tcp nfs | 100003 3,4 2049/tcp6 nfs | 100005 1,2,3 34973/tcp6 mountd | 100005 1,2,3 36703/tcp mountd | 100005 1,2,3 37809/udp6 mountd | 100005 1,2,3 47379/udp mountd | 100021 1,3,4 35163/udp nlockmgr | 100021 1,3,4 38723/tcp nlockmgr | 100021 1,3,4 42063/tcp6 nlockmgr | 100021 1,3,4 50684/udp6 nlockmgr | 100227 3 2049/tcp nfs_acl | 100227 3 2049/tcp6 nfs_acl | 100227 3 2049/udp nfs_acl |_ 100227 3 2049/udp6 nfs_acl 139/tcp open netbios-ssn Samba smbd 3.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.monoloco.org/vulnnet/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.monoloco.org/vulnnet/</guid>
+      <description>Enumeration    Port Scan     pre code { background-color: #eee; }  monoloco@kali:~/Dokumente/THM/vulnnet$ nmap -sV -sC -oA nmap/output vulnnet.th m Starting Nmap 7.80 ( https://nmap.org ) at 2021-03-17 21:26 GMT Stats: 0:00:11 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan NSE Timing: About 99.63% done; ETC: 21:27 (0:00:00 remaining) Nmap scan report for vulnnet.thm (10.10.15.6) Host is up (0.046s latency). Not shown: 998 closed ports PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 7.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.monoloco.org/vulnnetdotbpy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.monoloco.org/vulnnetdotbpy/</guid>
+      <description>Enumeration    Port Scan     pre code { background-color: #eee; }  # Nmap 7.80 scan initiated Wed Apr 7 20:55:28 2021 as: nmap -sV -sC -oA nmap/output vulnnetdotpy.thm Nmap scan report for vulnnetdotpy.thm (10.10.6.225) Host is up (0.052s latency). Not shown: 999 closed ports PORT STATE SERVICE VERSION 8080/tcp open http Werkzeug httpd 1.0.1 (Python 3.6.9) | http-title: VulnNet Entertainment - Login | Discover |_Requested resource was http://vulnnetdotpy.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.monoloco.org/vulnnetdotjar/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.monoloco.org/vulnnetdotjar/</guid>
+      <description>Enumeration    Port Scan     pre code { background-color: #eee; }  # Nmap 7.80 scan initiated Sat Apr 24 07:47:06 2021 as: nmap -sC -sV -oA nmap/output 10.10.124.121 Nmap scan report for 10.10.124.121 Host is up (0.083s latency). Not shown: 998 closed ports PORT STATE SERVICE VERSION 8009/tcp open ajp13 Apache Jserv (Protocol v1.3) | ajp-methods: |_ Supported methods: GET HEAD POST OPTIONS 8080/tcp open http Apache Tomcat 9.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.monoloco.org/vulnnetnode/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.monoloco.org/vulnnetnode/</guid>
+      <description>Enumeration    Port Scan     pre code { background-color: #eee; }  # Nmap 7.80 scan initiated Fri Mar 26 20:29:24 2021 as: nmap -sV -sC -oA nmap/output vulnnetnode.thm Nmap scan report for vulnnetnode.thm (10.10.12.80) Host is up (0.055s latency). Not shown: 999 closed ports PORT STATE SERVICE VERSION 8080/tcp open http Node.js Express framework |_http-title: VulnNet &amp;amp;ndash; Your reliable news source &amp;amp;ndash; Try Now! Service detection performed.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.monoloco.org/vulnnetroasted/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.monoloco.org/vulnnetroasted/</guid>
+      <description>Enumeration    Port Scan    Rustscan  pre code { background-color: #eee; }  Open 10.10.218.15:53 Open 10.10.218.15:88 Open 10.10.218.15:389 Open 10.10.218.15:445 Open 10.10.218.15:139 Open 10.10.218.15:135 Open 10.10.218.15:464 Open 10.10.218.15:3269 Open 10.10.218.15:3268 Open 10.10.218.15:5985 Open 10.10.218.15:9389 Open 10.10.218.15:49667 Open 10.10.218.15:49666 Open 10.10.218.15:49676 Open 10.10.218.15:49695 Open 10.10.218.15:49674 Open 10.10.218.15:49675 Open 10.10.218.15:49774 NMAP
+tarting Nmap 7.80 ( https://nmap.org ) at 2021-05-14 23:47 GMT Nmap scan report for vulnnet.thm (10.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.monoloco.org/watcher/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.monoloco.org/watcher/</guid>
+      <description>Enumeration    Port Scan     pre code { background-color: #eee; }  # Nmap 7.80 scan initiated Sun Mar 21 22:09:16 2021 as: nmap -sV -sC -oA nmap/output watcher.thm Nmap scan report for watcher.thm (10.10.90.140) Host is up (0.081s latency). Not shown: 997 closed ports PORT STATE SERVICE VERSION 21/tcp open ftp vsftpd 3.0.3 22/tcp open ssh OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0) | ssh-hostkey: | 2048 e1:80:ec:1f:26:9e:32:eb:27:3f:26:ac:d2:37:ba:96 (RSA) | 256 36:ff:70:11:05:8e:d4:50:7a:29:91:58:75:ac:2e:76 (ECDSA) |_ 256 48:d2:3e:45:da:0c:f0:f6:65:4e:f9:78:97:37:aa:8a (ED25519) 80/tcp open http Apache httpd 2.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.monoloco.org/wekor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.monoloco.org/wekor/</guid>
+      <description>Enumeration    Port Scan    Started with an NMAP Scan (as usual)  pre code { background-color: #eee; }  monoloco@kali:~/Dokumente/THM/wekor$ nmap -sV -sC -oA nmap/output wektor.thm Starting Nmap 7.80 ( https://nmap.org ) at 2021-03-08 19:59 GMT Nmap scan report for wektor.thm (10.10.88.16) Host is up (0.078s latency). Not shown: 998 closed ports PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 7.2p2 Ubuntu 4ubuntu2.10 (Ubuntu Linux; protocol 2.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.monoloco.org/whoami/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.monoloco.org/whoami/</guid>
+      <description>whoami    I&amp;rsquo;m a security engineer and work as a penetration tester. On this website, you will find resources I use for my day to day job, various writeups (mainly THM) and anything related cybersecurity which I find worth sharing. If you have any comments, feedback, or questions, hit me up on Twitter!
+   contact     table,td,tr,th{ border:0; }   self@monoloco.org</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.monoloco.org/writeups/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.monoloco.org/writeups/</guid>
+      <description>THM     tr:nth-child(even){background-color: #f2f2f2;} tr:hover {background-color: #ddd;} th { padding-top: 12px; padding-bottom: 12px; text-align: left; background-color: #000000; color: white; } a { font-weight: bold; color: black; }     Name Difficulty Category     Broker Medium message broker   Catpictures  Easy security, phpbb forum docker   Coldvvars  Medium security, XPath, Injection   Cooctus  Medium security, nfs, web, cooctus-clan   Gitandcrumpets  Medium security, ctf, git, hardened   IDE  Medium enumeration, public exploit, privilege escalation, ftp   Metamorphosis  Medium security, rsync, sniff, sqli   Sqhell  Medium web, mysql, sqli   Super-Spam  Medium security, web   Sweettoothinc  Medium security, database   Team  Easy boot2root, enumeration, misconfiguration   Thatstheticket  Medium web, xss, dns    </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.monoloco.org/zeno/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.monoloco.org/zeno/</guid>
+      <description>Enumeration    Port Scan     pre code { background-color: #eee; }  Starting Nmap 7.91 ( https://nmap.org ) at 2021-11-01 13:37 EDT Nmap scan report for zeno.thm (10.10.149.36) Host is up (0.059s latency). Not shown: 65533 filtered ports PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 7.4 (protocol 2.0) | ssh-hostkey: | 2048 09:23:62:a2:18:62:83:69:04:40:62:32:97:ff:3c:cd (RSA) | 256 33:66:35:36:b0:68:06:32:c1:8a:f6:01:bc:43:38:ce (ECDSA) |_ 256 14:98:e3:84:70:55:e6:60:0c:c2:09:77:f8:b7:a6:1c (ED25519) 12340/tcp open http Apache httpd 2.</description>
+    </item>
+    
+    <item>
+      <title>Broker</title>
+      <link>https://www.monoloco.org/broker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.monoloco.org/broker/</guid>
+      <description>https://tryhackme.com/room/broker
+Enumeration    Port Scan     pre code { background-color: #eee; }  # Nmap 7.80 scan initiated Wed Mar 10 21:41:24 2021 as: nmap -sC -sV -p- -oA nmap/output broker.thm Nmap scan report for broker.thm (10.10.126.18) Host is up (0.080s latency). Not shown: 65531 closed ports PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0) | ssh-hostkey: | 2048 4c:75:a0:7b:43:87:70:4f:70:16:d2:3c:c4:c5:a4:e9 (RSA) | 256 f4:62:b2:ad:f8:62:a0:91:2f:0a:0e:29:1a:db:70:e4 (ECDSA) |_ 256 92:d2:87:7b:98:12:45:93:52:03:5e:9e:c7:18:71:d5 (ED25519) 1883/tcp open mqtt?</description>
+    </item>
+    
+    <item>
+      <title>Cat Pictures</title>
+      <link>https://www.monoloco.org/catpictures/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.monoloco.org/catpictures/</guid>
+      <description>https://tryhackme.com/room/catpictures
+Enumeration    Port Scan     pre code { background-color: #eee; }  monoloco@kali:~/Dokumente/THM/catpic$ nmap -sC -sV -oA nmap/output catpic.thm Starting Nmap 7.80 ( https://nmap.org ) at 2021-06-04 21:20 GMT Nmap scan report for catpic.thm (10.10.162.162) Host is up (0.060s latency). Not shown: 998 closed ports PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0) | ssh-hostkey: | 2048 37:43:64:80:d3:5a:74:62:81:b7:80:6b:1a:23:d8:4a (RSA) | 256 53:c6:82:ef:d2:77:33:ef:c1:3d:9c:15:13:54:0e:b2 (ECDSA) |_ 256 ba:97:c3:23:d4:f2:cc:08:2c:e1:2b:30:06:18:95:41 (ED25519) 8080/tcp open http Apache httpd 2.</description>
+    </item>
+    
+    <item>
+      <title>Cold VVars</title>
+      <link>https://www.monoloco.org/coldvvars/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.monoloco.org/coldvvars/</guid>
+      <description>https://tryhackme.com/room/coldvvars
+Enumeration    Port Scan     pre code { background-color: #eee; }  monoloco@kali:~/Dokumente/THM/coldvvars$ nmap -sC -sV -oA nmap/output coldvvars.thm Starting Nmap 7.80 ( https://nmap.org ) at 2021-07-09 19:07 GMT Nmap scan report for coldvvars.thm (10.10.109.160) Host is up (0.052s latency). Not shown: 996 closed ports PORT STATE SERVICE VERSION 139/tcp open netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP) 445/tcp open netbios-ssn Samba smbd 4.</description>
+    </item>
+    
+    <item>
+      <title>Cooctus Stories</title>
+      <link>https://www.monoloco.org/cooctus/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.monoloco.org/cooctus/</guid>
+      <description>https://tryhackme.com/room/cooctusadventures
+Enumeration    Port Scan     pre code { background-color: #eee; }  # Nmap 7.80 scan initiated Wed Apr 14 22:40:12 2021 as: nmap -sC -sV -oA nmap/output cooctus.thm Nmap scan report for cooctus.thm (10.10.63.190) Host is up (0.072s latency). Not shown: 996 closed ports PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0) | ssh-hostkey: | 2048 e5:44:62:91:90:08:99:5d:e8:55:4f:69:ca:02:1c:10 (RSA) | 256 e5:a7:b0:14:52:e1:c9:4e:0d:b8:1a:db:c5:d6:7e:f0 (ECDSA) |_ 256 02:97:18:d6:cd:32:58:17:50:43:dd:d2:2f:ba:15:53 (ED25519) 111/tcp open rpcbind 2-4 (RPC #100000) | rpcinfo: | program version port/proto service | 100000 2,3,4 111/tcp rpcbind | 100000 2,3,4 111/udp rpcbind | 100000 3,4 111/tcp6 rpcbind | 100000 3,4 111/udp6 rpcbind | 100003 3 2049/udp nfs | 100003 3 2049/udp6 nfs | 100003 3,4 2049/tcp nfs | 100003 3,4 2049/tcp6 nfs | 100005 1,2,3 39957/udp6 mountd | 100005 1,2,3 44553/tcp6 mountd | 100005 1,2,3 51843/tcp mountd | 100005 1,2,3 58323/udp mountd | 100021 1,3,4 38081/tcp nlockmgr | 100021 1,3,4 41515/tcp6 nlockmgr | 100021 1,3,4 46346/udp nlockmgr | 100021 1,3,4 54342/udp6 nlockmgr | 100227 3 2049/tcp nfs_acl | 100227 3 2049/tcp6 nfs_acl | 100227 3 2049/udp nfs_acl |_ 100227 3 2049/udp6 nfs_acl 2049/tcp open nfs_acl 3 (RPC #100227) 8080/tcp open http Werkzeug httpd 0.</description>
+    </item>
+    
+    <item>
+      <title>Fusion Corp</title>
+      <link>https://www.monoloco.org/fusioncorp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.monoloco.org/fusioncorp/</guid>
+      <description>https://tryhackme.com/room/fusioncorp
+Enumeration    Open Ports - Rustscan     pre code { background-color: #eee; }  PORT STATE SERVICE REASON 53/tcp open domain syn-ack 80/tcp open http syn-ack 88/tcp open kerberos-sec syn-ack 135/tcp open msrpc syn-ack 139/tcp open netbios-ssn syn-ack 389/tcp open ldap syn-ack 3268/tcp open globalcatLDAP syn-ack 3269/tcp open globalcatLDAPssl syn-ack 9389/tcp open adws syn-ack 49666/tcp open unknown syn-ack 49667/tcp open unknown syn-ack 49677/tcp open unknown syn-ack 49699/tcp open unknown syn-ack Open Ports - Nmap    monoloco@kali:~/Dokumente/THM/fusioncorp$ nmap -sC -sV -oA nmap/output fusioncorp.</description>
+    </item>
+    
+    <item>
+      <title>Git and Crumpets</title>
+      <link>https://www.monoloco.org/gitandcrumpets/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.monoloco.org/gitandcrumpets/</guid>
+      <description>https://tryhackme.com/room/gitandcrumpets
+Enumeration    Port Scan     pre code { background-color: #eee; }  monoloco@kali:~$ rustscan -a 10.10.202.72 --ulimit 5000 The Modern Day Port Scanner. ________________________________________ : https://discord.gg/GFrQsGy : : https://github.com/RustScan/RustScan : -------------------------------------- Real hackers hack time ⌛ [~] The config file is expected to be at &amp;quot;/home/monoloco/.rustscan.toml&amp;quot; [~] Automatically increasing ulimit value to 5000. Open 10.10.202.72:22 Open 10.10.202.72:80 [~] Starting Script(s) [&amp;gt;] Script to be run Some(&amp;quot;nmap -vvv -p {{port}} {{ip}}&amp;quot;) [~] Starting Nmap 7.</description>
+    </item>
+    
+    <item>
+      <title>IDE</title>
+      <link>https://www.monoloco.org/ide/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.monoloco.org/ide/</guid>
+      <description>https://tryhackme.com/room/ide
+Enumeration    Port Scan     pre code { background-color: #eee; }  ┌──(kali㉿kali)-[~/Documents/THM/ide] └─$ sudo nmap ide.thm -sC -sV -p- -oA nmap/output Starting Nmap 7.91 ( https://nmap.org ) at 2021-11-05 16:56 EDT Nmap scan report for ide.thm (10.10.121.139) Host is up (0.058s latency). Not shown: 65531 closed ports PORT STATE SERVICE VERSION 21/tcp open ftp vsftpd 3.0.3 |_ftp-anon: Anonymous FTP login allowed (FTP code 230) | ftp-syst: | STAT: | FTP server status: | Connected to ::ffff:10.</description>
+    </item>
+    
+    <item>
+      <title>Metamorphosis</title>
+      <link>https://www.monoloco.org/metamorphosis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.monoloco.org/metamorphosis/</guid>
+      <description>https://tryhackme.com/room/metamorphosis
+Enumeration    Port Scan     pre code { background-color: #eee; }  monoloco@kali:~/Dokumente/THM$ nmap -sC -sV -oA metamorphosis/nmap/output metamorphosis Starting Nmap 7.80 ( https://nmap.org ) at 2021-07-20 19:14 GMT Nmap scan report for metamorphosis (10.10.220.228) Host is up (0.054s latency). Not shown: 995 closed ports PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0) | ssh-hostkey: | 2048 f7:0f:0a:18:50:78:07:10:f2:32:d1:60:30:40:d4:be (RSA) |_ 256 fe:bf:53:f1:d0:5a:7c:30:db:ac:c8:3c:79:64:47:c8 (ED25519) 80/tcp open http Apache httpd 2.</description>
+    </item>
+    
+    <item>
+      <title>sqhell</title>
+      <link>https://www.monoloco.org/sqhell/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.monoloco.org/sqhell/</guid>
+      <description>https://tryhackme.com/room/sqhell
+Flag 1     pre code { background-color: #eee; }  Payload
+&#39;or 1=1 -- Nice, we found flag 1
+Flag 2    According to the Hint: Make sure to read the terms and conditions ;)
+it must have something to do with the X-Forwarded-for header
+So, I started to following sqlmap command
+sqlmap --dbms mysql --headers=&amp;quot;X-forwarded-for:1*&amp;quot; -u http://sqhell.thm and saw, that it is very likely vulnerable.</description>
+    </item>
+    
+    <item>
+      <title>Super-Spam</title>
+      <link>https://www.monoloco.org/super-spam/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.monoloco.org/super-spam/</guid>
+      <description>https://tryhackme.com/room/superspamr
+Enumeration    Port Scan     pre code { background-color: #eee; }  monoloco@kali:~$ nmap -sV -sC -p $( grep Discovered /home/monoloco/Dokumente/THM/super-spam/output | cut -d &amp;quot; &amp;quot; -f4|cut -d &amp;quot;/&amp;quot; -f1 | tr &amp;quot;\n&amp;quot; &amp;quot;,&amp;quot; ) superspam.thm Starting Nmap 7.80 ( https://nmap.org ) at 2021-08-15 17:24 GMT Nmap scan report for superspam.thm (10.10.148.245) Host is up (0.051s latency). PORT STATE SERVICE VERSION 80/tcp open http Apache httpd 2.</description>
+    </item>
+    
+    <item>
+      <title>Super-Spam</title>
+      <link>https://www.monoloco.org/sweettoothinc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.monoloco.org/sweettoothinc/</guid>
+      <description>https://tryhackme.com/room/sweettoothinc
+Enumeration    Port Scan - Task 2    Do a TCP portscan. What is the name of the database software running on one of these ports?  pre code { background-color: #eee; }  monoloco@kali:~/Dokumente/THM/sweettoothinc$ nmap -sC -sV -oA nmap/output sweettoothinc.thm Starting Nmap 7.80 ( https://nmap.org ) at 2021-07-24 06:52 GMT Nmap scan report for sweettoothinc.thm (10.10.136.232) Host is up (0.051s latency). Not shown: 997 closed ports PORT STATE SERVICE VERSION 111/tcp open rpcbind 2-4 (RPC #100000) | rpcinfo: | program version port/proto service | 100000 2,3,4 111/tcp rpcbind | 100000 2,3,4 111/udp rpcbind | 100000 3,4 111/tcp6 rpcbind | 100000 3,4 111/udp6 rpcbind | 100024 1 33801/udp status | 100024 1 41313/udp6 status | 100024 1 51857/tcp6 status |_ 100024 1 57495/tcp status 2222/tcp open ssh OpenSSH 6.</description>
+    </item>
+    
+    <item>
+      <title>Team</title>
+      <link>https://www.monoloco.org/team/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.monoloco.org/team/</guid>
+      <description>https://tryhackme.com/room/teamcw
+Enumeration    Port Scan      Run a Port Scan using NMAP nmap -sV -sC -oA nmap/output &amp;lt;IP_ADDRESS_OF_MASCHINE&amp;gt;
+  We can see that Ports 21, 22 and 80 are open  pre code { background-color: #eee; }    Nmap 7.80 scan initiated Fri Mar 5 21:49:20 2021 as: nmap -sV -sC -oA nmap/output teamcw Nmap scan report for teamcw (10.10.87.236) Host is up (0.</description>
+    </item>
+    
+  </channel>
+</rss>
