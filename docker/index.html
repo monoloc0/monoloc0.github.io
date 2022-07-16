@@ -10,15 +10,15 @@
     
 
     <meta name="author" content="monoloc0">
-    <meta name="description" content="Useful docker commands     pre code { background-color: #eee; }  # List containers docker ps # List images docker images # Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE # e.g. To tag a local image with ID “0e5574283393” into the “fedora” repository with “version1.0”: docker tag 0e5574283393 fedora/httpd:version1.0 # Build an image from a Dockerfile docker build . # Launch a Bash terminal within a container docker exec -it &lt;container&gt; /bin/bash ">
+    <meta name="description" content="Useful docker commands     pre code { background-color: #eee; }  # List containers docker ps # List images docker images # Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE # e.g. To tag a local image with ID “0e5574283393” into the “fedora” repository with “version1.0”: docker tag 0e5574283393 fedora/httpd:version1.0 # Build an image from a Dockerfile docker build . # Launch a Bash terminal within a container docker exec -it &lt;container&gt; /bin/bash # Starts the containers in the background and leaves them running docker-compose up --detach ">
     <meta name="keywords" content="infosec,bugbounty,personal">
 
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="Useful docker commands     pre code { background-color: #eee; }  # List containers docker ps # List images docker images # Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE # e.g. To tag a local image with ID “0e5574283393” into the “fedora” repository with “version1.0”: docker tag 0e5574283393 fedora/httpd:version1.0 # Build an image from a Dockerfile docker build . # Launch a Bash terminal within a container docker exec -it &lt;container&gt; /bin/bash "/>
+<meta name="twitter:description" content="Useful docker commands     pre code { background-color: #eee; }  # List containers docker ps # List images docker images # Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE # e.g. To tag a local image with ID “0e5574283393” into the “fedora” repository with “version1.0”: docker tag 0e5574283393 fedora/httpd:version1.0 # Build an image from a Dockerfile docker build . # Launch a Bash terminal within a container docker exec -it &lt;container&gt; /bin/bash # Starts the containers in the background and leaves them running docker-compose up --detach "/>
 
     <meta property="og:title" content="" />
-<meta property="og:description" content="Useful docker commands     pre code { background-color: #eee; }  # List containers docker ps # List images docker images # Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE # e.g. To tag a local image with ID “0e5574283393” into the “fedora” repository with “version1.0”: docker tag 0e5574283393 fedora/httpd:version1.0 # Build an image from a Dockerfile docker build . # Launch a Bash terminal within a container docker exec -it &lt;container&gt; /bin/bash " />
+<meta property="og:description" content="Useful docker commands     pre code { background-color: #eee; }  # List containers docker ps # List images docker images # Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE # e.g. To tag a local image with ID “0e5574283393” into the “fedora” repository with “version1.0”: docker tag 0e5574283393 fedora/httpd:version1.0 # Build an image from a Dockerfile docker build . # Launch a Bash terminal within a container docker exec -it &lt;container&gt; /bin/bash # Starts the containers in the background and leaves them running docker-compose up --detach " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.monoloco.org/docker/" /><meta property="article:section" content="" />
 
@@ -143,6 +143,10 @@ docker tag 0e5574283393 fedora/httpd:version1.0
 
 # Launch a Bash terminal within a container
 docker exec -it &lt;container&gt; /bin/bash
+
+
+# Starts the containers in the background and leaves them running
+docker-compose up --detach
 </code></pre>
   </article>
 </section>

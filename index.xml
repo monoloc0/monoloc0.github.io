@@ -23,7 +23,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://www.monoloco.org/docker/</guid>
-      <description>Useful docker commands     pre code { background-color: #eee; }  # List containers docker ps # List images docker images # Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE # e.g. To tag a local image with ID “0e5574283393” into the “fedora” repository with “version1.0”: docker tag 0e5574283393 fedora/httpd:version1.0 # Build an image from a Dockerfile docker build . # Launch a Bash terminal within a container docker exec -it &amp;lt;container&amp;gt; /bin/bash </description>
+      <description>Useful docker commands     pre code { background-color: #eee; }  # List containers docker ps # List images docker images # Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE # e.g. To tag a local image with ID “0e5574283393” into the “fedora” repository with “version1.0”: docker tag 0e5574283393 fedora/httpd:version1.0 # Build an image from a Dockerfile docker build . # Launch a Bash terminal within a container docker exec -it &amp;lt;container&amp;gt; /bin/bash # Starts the containers in the background and leaves them running docker-compose up --detach </description>
     </item>
     
     <item>
